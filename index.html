@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Portfolio BTS SIO SISR - Nawfal MARECAR</title>
+<style>
+:root{--bg:#f6f6f8;--card:#fff;--tx:#17171c;--mut:#5d5d6b;--ac:#d9534f;--bd:#e2e2e8;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f0f13;--card:#18181e;--tx:#f1f1f4;--mut:#a3a3b2;--bd:#2a2a33}}
+:root[data-theme="dark"]{--bg:#0f0f13;--card:#18181e;--tx:#f1f1f4;--mut:#a3a3b2;--bd:#2a2a33}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:Poppins,"Segoe UI",system-ui,sans-serif;line-height:1.6}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--bd);display:flex;justify-content:space-between;align-items:center;padding:12px 5vw;gap:12px;flex-wrap:wrap}
+.logo{font-weight:700}.logo span{color:var(--ac)}
+nav{display:flex;gap:4px;flex-wrap:wrap}
+nav a{color:var(--tx);text-decoration:none;padding:6px 12px;border-radius:8px;font-size:.92rem;cursor:pointer}
+nav a:hover,nav a.on{color:var(--ac)}
+main{max-width:980px;margin:0 auto;padding:40px 5vw 60px}
+section{display:none}section.on{display:block}
+h1{font-size:clamp(2rem,6vw,3.2rem);margin:.2em 0}
+h2{font-size:1.6rem;margin:0 0 16px}h3{margin:0 0 8px}
+.sub{font-size:1.25rem;color:var(--ac);margin:0 0 16px}
+p{color:var(--mut);margin:0 0 12px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:22px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+ul{margin:0;padding-left:20px;color:var(--mut)}li{margin:4px 0}
+.btn{display:inline-block;background:var(--ac);color:#fff;border:0;padding:10px 20px;border-radius:10px;text-decoration:none;font:inherit;cursor:pointer;margin:6px 8px 0 0}
+.btn.o{background:none;border:1px solid var(--ac);color:var(--ac)}
+.btn.off{background:none;border:1px dashed var(--bd);color:var(--mut);cursor:default}
+.tag{display:inline-block;border:1px solid var(--bd);border-radius:20px;padding:2px 12px;font-size:.85rem;color:var(--mut);margin:0 6px 6px 0}
+.hero{padding:40px 0}
+footer{text-align:center;color:var(--mut);font-size:.85rem;padding:24px 5vw;border-top:1px solid var(--bd)}
+.liste{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:6px 22px;margin-bottom:24px}
+.ligne{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid var(--bd)}
+.ligne:last-child{border-bottom:0}
+.ligne span{color:var(--tx);font-weight:500;font-size:.95rem}
+.ligne .btn{margin:0;padding:8px 16px;font-size:.85rem;white-space:nowrap}
+.titre-liste{color:var(--ac);font-size:.9rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin:28px 0 12px}
+.contact{display:grid;grid-template-columns:1fr 1.2fr;gap:40px;margin-top:40px;padding:40px 0;border-top:1px solid var(--bd)}
+@media(max-width:720px){.contact{grid-template-columns:1fr}}
+.contact .lab{color:var(--ac);font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin:0 0 6px}
+.contact h2{font-size:2rem;margin:0 0 30px}
+.contact .val{color:var(--tx);font-weight:500;margin:0 0 22px;text-decoration:none;display:block}
+.contact form{display:flex;flex-direction:column;gap:12px}
+.contact input,.contact textarea{width:100%;background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:14px 16px;color:var(--tx);font:inherit;font-size:.95rem}
+.contact input:focus,.contact textarea:focus{outline:none;border-color:var(--ac)}
+.contact textarea{min-height:120px;resize:vertical}
+.contact button{align-self:flex-start;background:var(--ac);color:#fff;border:0;padding:12px 24px;border-radius:10px;font:inherit;font-weight:600;cursor:pointer;margin-top:4px}
+.contact button:hover{opacity:.9}
+.real{background:var(--card);border:1px solid var(--bd);border-radius:14px;overflow:hidden;margin-bottom:24px}
+.real .img{height:290px;background:#232f5e;overflow:hidden}
+.real .img img{width:100%;height:100%;object-fit:cover;display:block}
+.real .corps{padding:28px}
+.real .cat{color:var(--ac);font-size:.85rem;font-weight:700;text-transform:uppercase;margin:0 0 10px}
+.real h3{font-size:1.5rem;margin:0 0 14px;line-height:1.3}
+.real p{font-size:1rem}
+.real .tag{background:var(--bg);border:0;padding:6px 14px;border-radius:8px;font-size:.9rem}
+.real .liens{margin-top:18px;display:flex;flex-direction:column;gap:6px}
+.real .liens a{color:var(--ac);font-weight:600;font-size:1.1rem;text-decoration:none;cursor:pointer}
+.real .liens a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">Nawfal MARECAR <span>SIO SISR</span></div>
+  <nav id="nav">
+    <a data-s="accueil" class="on">Accueil</a>
+    <a data-s="entreprise">Entreprise</a>
+    <a data-s="e5">Missions E5</a>
+    <a data-s="e6">Projets E6</a>
+    <a data-s="veille">Veille technologique</a>
+  </nav>
+</header>
+
+<main>
+<section id="accueil" class="on">
+  <div class="hero">
+    <p>Portfolio BTS SIO option SISR</p>
+    <h1>MARECAR Nawfal</h1>
+    <div class="sub">Infrastructure IT &amp; Cybersécurité</div>
+<p style="max-width:620px">Étudiant en 2ème année de BTS SIO option SISR. Je conçois, j'administre et je sécurise des architectures réseaux et systèmes. Je me concentre sur le maintien en condition opérationnelle et la protection des données.</p>
+    <a class="btn" data-go="e5">Voir mes projets</a>
+    <a class="btn o" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Me contacter</a>
+  </div>
+
+  <div class="grid">
+<div class="card"><h3>Formation</h3><p>BTS SIO option SISR, 2ème année (session 2026).</p></div>
+    <div class="card"><h3>Entreprise</h3><p>Circle Consulting, à Sèvres (92).</p></div>
+    <div class="card"><h3>Domaines</h3><span class="tag">Réseaux</span><span class="tag">Systèmes</span><span class="tag">Cybersécurité</span></div>
+  </div>
+
+  <h2 style="margin-top:28px">À propos</h2>
+  <div class="card">
+    <p>Je m'appelle MARECAR Nawfal, j'ai 19 ans. Je suis actuellement étudiant en deuxieme année de BTS SIO, spécialité SISR.</p>
+    <p>Je suis passionné par les nouvelles technologies et mon objectif principal est de faire carrière dans ce domaine.</p>
+    <p>J'ai suivi un baccalauréat professionnel Systèmes Numériques (SN), option C (RISC – Réseaux Informatiques et Systèmes Communicants), au lycée Claude Chappe à Nanterre, de 2022 à 2025.</p>
+  </div>
+
+  <h2 style="margin-top:28px">Expériences professionnelles</h2>
+  <div class="grid">
+    <div class="card"><h3>NOMIOS</h3><ul>
+      <li>Assistance technique et support client sur les solutions de cybersécurité et réseau</li>
+      <li>Veille technologique et formation des équipes internes et des clients</li>
+      <li>Rédaction de rapports d'audit et recommandations en matière de sécurité</li></ul>
+      <p style="margin-top:12px">Stage du 12 novembre au 20 décembre 2024.</p>
+      <a class="btn o" href="Attestation stage nomios.pdf" target="_blank">Voir l'attestation de stage (PDF)</a></div>
+    <div class="card"><h3>PC MARKET</h3><ul>
+      <li>Réparations des PC</li><li>Installations des logiciels Windows</li><li>Réception clientèle</li></ul></div>
+    <div class="card"><h3>DM INFORMATIQUE</h3><ul>
+      <li>Réparations des PC</li><li>Réparations des mobiles</li><li>Installations des logiciels Windows</li><li>Changement de batteries des téléphones</li><li>Réception clientèle</li></ul></div>
+  </div>
+
+  <div class="card" style="margin-top:28px"><h3>Mon CV</h3><p>Tu peux télécharger mon CV pour en savoir plus sur mon parcours, mes compétences et mes expériences professionnelles.</p>
+    <a class="btn" href="NAWFAL_MARECAR_CV.pdf" download>Télécharger CV</a></div>
+
+  <div class="contact" id="contact">
+    <div>
+      <p class="lab">Contact</p>
+      <h2>Restons en contact</h2>
+      <p class="lab">Email</p>
+      <a class="val" href="mailto:nawfal.marecar95@gmail.com">nawfal.marecar95@gmail.com</a>
+      <p class="lab">Téléphone</p>
+      <a class="val" href="tel:+33664622462">06 64 62 24 62</a>
+    </div>
+    <form id="cform">
+      <input type="text" id="cnom" placeholder="Votre nom" required>
+      <input type="email" id="cmail" placeholder="Votre email" required>
+      <textarea id="cmsg" placeholder="Votre message" required></textarea>
+      <button type="submit">Envoyer le message</button>
+    </form>
+  </div>
+</section>
+
+<section id="entreprise">
+  <div style="text-align:center;margin-bottom:20px">
+    <img src="Logo-Circle.png" alt="Logo Circle Consulting" style="height:120px;width:auto;border-radius:14px;border:1px solid var(--bd)" onerror="this.style.display='none'">
+  </div>
+  <h2 style="text-align:center">Mon entreprise : Circle Consulting</h2>
+  <div class="card">
+    <p>Circle Consulting est une entreprise française immatriculée à Sèvres (92310, Hauts-de-Seine). Son siège social est situé au 2 Avenue de la Cristallerie.</p>
+    <div class="grid" style="margin-top:16px">
+      <ul>
+        <li><b>SIREN :</b> 979 460 938</li>
+        <li><b>SIRET (siège) :</b> 979 460 938 00025</li>
+        <li><b>N° TVA :</b> FR44979460938</li>
+        <li><b>Code NAF/APE :</b> 47.91B – Vente à distance sur catalogue spécialisé</li>
+      </ul>
+      <ul>
+        <li><b>Date de création :</b> 12 septembre 2023</li>
+        <li><b>Forme juridique :</b> SAS (Société par actions simplifiée)</li>
+        <li><b>Capital social :</b> 720 000 €</li>
+        <li><b>Effectif :</b> au moins 10 salariés</li>
+        <li><b>Chiffre d'affaires :</b> 7,5 M€</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Mon poste</h3>
+    <p><b>Technicien informatique</b> chez Circle Consulting, en alternance dans le cadre de mon BTS SIO SISR.</p>
+    <span class="tag">SAV &amp; réparation</span><span class="tag">Diagnostic</span><span class="tag">Systèmes &amp; réseaux</span>
+  </div>
+  <div class="grid">
+    <div class="card"><h3>Services &amp; objectifs</h3>
+      <p>Passionné par la technique, j'accompagne mes clients dans l'optimisation de leur environnement numérique à travers trois piliers :</p>
+      <ul>
+        <li><b>Maintenance &amp; Réparation :</b> diagnostic précis et remise en état de MacBook et PC.</li>
+        <li><b>Gestion MDM :</b> déploiement et sécurisation de flottes d'appareils à distance.</li>
+        <li><b>Configuration &amp; Réseaux :</b> installation complète de systèmes et conception de réseaux performants et sécurisés.</li>
+      </ul></div>
+    <div class="card"><h3>Mes activités</h3>
+      <p>En tant que technicien chez Circle Consulting, je m'occupe principalement du Service Après-Vente (SAV) pour le matériel informatique. Lorsqu'un client nous renvoie un appareil en panne, je réalise un diagnostic pour trouver l'origine du problème. Je m'occupe ensuite des réparations, que ce soit en changeant une pièce défectueuse ou en réglant un souci de logiciel. Pour finir, je teste toujours l'appareil pour m'assurer qu'il fonctionne parfaitement avant de le renvoyer au client.</p>
+    </div>
+  </div>
+</section>
+
+<section id="e5">
+  <h2>Missions (E5)</h2>
+  <p>Documentation des projets techniques et des solutions d'infrastructure mises en œuvre durant mon cursus.</p>
+
+  <h2 style="margin-top:28px">Tableau de synthèse</h2>
+  <div class="card">
+    <p>Ce document récapitule mes réalisations et les compétences du bloc SISR que j'ai travaillées.</p>
+    <h3 style="display:flex;align-items:center;justify-content:center;gap:10px;margin:18px 0 14px">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+      Aperçu de mon Tableau de Synthèse
+    </h3>
+    <iframe src="Tableau_de_synthese_Nawfal.pdf" title="Tableau de synthèse" style="width:100%;height:90vh;min-height:700px;border:0;border-radius:12px;background:#333"></iframe>
+    <div style="text-align:center;margin-top:12px">
+      <a class="btn" href="Tableau_de_synthese_Nawfal.pdf" download>Télécharger mon Tableau de Synthèse (PDF)</a>
+    </div>
+  </div>
+
+  <p class="titre-liste">Mes projets et travaux pratiques</p>
+  <div class="liste">
+    <div class="ligne"><span>🌐 Restructuration de l'infrastructure (VLAN, VTP, routage)</span><a class="btn" href="Livrable_Infrastructure_VLAN_Nawfal.pdf" data-doc="Livrable_Infrastructure_VLAN_Nawfal.pdf">Documentation (PDF)</a></div>
+    <div class="ligne"><span>🛡️ Sécurisation avec pfSense</span><a class="btn off">Bientôt disponible</a></div>
+    <div class="ligne"><span>🔑 Portail captif sous pfSense</span><a class="btn off">Bientôt disponible</a></div>
+    <div class="ligne"><span>📋 Administration OCS / GLPI</span><a class="btn" href="Livrable_GLPI_Nawfal_Isaac_v2.pdf" data-doc="Livrable_GLPI_Nawfal_Isaac_v2.pdf">Documentation (PDF)</a></div>
+    <div class="ligne"><span>📈 Supervision Nagios XI</span><a class="btn off">Bientôt disponible</a></div>
+    <div class="ligne"><span>🔁 Haute disponibilité HAProxy</span><a class="btn" href="Livrable_HAProxy_Nawfal_Isaac.pdf" data-doc="Livrable_HAProxy_Nawfal_Isaac.pdf">Documentation (PDF)</a></div>
+    <div class="ligne"><span>👥 Active Directory</span><a class="btn off">Bientôt disponible</a></div>
+    <div class="ligne"><span>🔍 Capture de paquets avec Wireshark</span><a class="btn" href="Livrable_Wireshark_Nawfal.pdf" data-doc="Livrable_Wireshark_Nawfal.pdf">Documentation (PDF)</a></div>
+    <div class="ligne"><span>💻 Création de mon portfolio</span><a class="btn o" data-go="accueil">Voir le site</a></div>
+  </div>
+
+  <p class="titre-liste">Projets en entreprise – Circle Consulting</p>
+  <div class="liste">
+    <div class="ligne"><span>📱 Configuration des iPod des magasins Inditex</span><a class="btn" href="Livrable_iPod_Inditex_Nawfal.pdf" data-doc="Livrable_iPod_Inditex_Nawfal.pdf">Documentation (PDF)</a></div>
+        <div class="ligne"><span>📱 MDM : gestion des tablettes d'écoles privées</span><a class="btn off">Bientôt disponible</a></div>
+  </div>
+</section>
+
+<section id="e5-doc">
+  <a class="btn o" data-go="e5">← Retour aux missions</a>
+  <h2 id="doc-titre" style="margin-top:20px">Documentation</h2>
+  <div class="card">
+    <h3 style="display:flex;align-items:center;justify-content:center;gap:10px;margin:0 0 14px">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+      Aperçu de mon livrable
+    </h3>
+    <iframe id="doc-frame" title="Aperçu du livrable" style="width:100%;height:90vh;min-height:700px;border:0;border-radius:12px;background:#333"></iframe>
+    <div style="text-align:center;margin-top:12px">
+      <a class="btn" id="doc-dl" href="#" download>Télécharger mon livrable (PDF)</a>
+    </div>
+  </div>
+</section>
+
+<section id="e6">
+  <style>
+.e6-intro{text-align:center;padding:10px 0 30px}
+.e6-intro h2{font-size:2.4rem;margin:0 0 24px}
+.e6-intro>p{text-align:left;font-size:1.05rem;max-width:900px;margin:0 auto 30px}
+.obj{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:24px 28px;max-width:720px;margin:0 auto;text-align:left}
+.obj h3{color:var(--ac);display:flex;align-items:center;gap:8px;margin:0 0 10px}
+.obj ul{margin-top:10px}.obj li{margin:8px 0}
+.e6-titre{text-align:center;color:var(--ac);font-size:1.9rem;margin:40px 0 24px}
+.reals{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+@media(max-width:800px){.reals{grid-template-columns:1fr}}
+.real{background:var(--card);border:1px solid var(--bd);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.real .img{height:220px;background:#232f5e;overflow:hidden}
+.real .img img{width:100%;height:100%;object-fit:cover;display:block}
+.real .corps{padding:24px;display:flex;flex-direction:column;flex:1}
+.real .cat{color:var(--ac);font-size:.8rem;font-weight:700;text-transform:uppercase;margin:0 0 10px}
+.real h3{font-size:1.25rem;margin:0 0 12px;line-height:1.35}
+.real p{font-size:.95rem}
+.real .tag{background:var(--bg);border:0;padding:5px 12px;border-radius:8px;font-size:.85rem}
+.real .liens{margin-top:auto;padding-top:16px;display:flex;flex-direction:column;gap:6px}
+.real .liens a{color:var(--ac);font-weight:600;font-size:1.05rem;text-decoration:none}
+.real .liens a:hover{text-decoration:underline}
+</style>
+
+  <div class="e6-intro">
+    <h2>Épreuve E6</h2>
+    <p>L'épreuve <b>E6</b> (Session 2026) du BTS SIO SISR évalue la capacité à concevoir, déployer et administrer une infrastructure réseau complète. Ici, les situations professionnelles se déroulent au sein de la société StadiumCompany, spécialisée dans les activités d'administration et de gestion. Pour la conception et l'implémentation de ses solutions systèmes et réseaux, elle s'appuie sur l'expertise de NetworkingCompany.</p>
+    <div class="obj">
+      <h3>🎯 Objectifs de l'épreuve</h3>
+      <p>Cette épreuve valide la maîtrise des services réseaux essentiels et la capacité à répondre aux besoins d'une organisation :</p>
+      <ul>
+        <li><b>Conception :</b> analyse des besoins et choix d'architecture (VLAN, DMZ).</li>
+        <li><b>Mise en œuvre :</b> déploiement de services Windows Server 2022 (AD, DNS, DHCP) et équipements Cisco.</li>
+        <li><b>Exploitation :</b> supervision avec Nagios XI et gestion de parc via GLPI.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 class="e6-titre">Les réalisations en cours de formation</h2>
+  <div class="reals">
+    <div class="real">
+      <div class="img"><img src="SitkaPDpatch.png" alt="StadiumCompany" onerror="this.style.display='none'"></div>
+      <div class="corps">
+        <p class="cat">Réalisation n°1</p>
+        <h3>Mise en œuvre d'une infrastructure réseau et système sécurisée pour le service restauration</h3>
+        <p>Le restaurant du StadiumCompany a modernisé son système de prise de commande en utilisant des tablettes sans fil. L'enjeu principal est de permettre un accès sécurisé aux menus et au logiciel de caisse, tout en assurant une isolation stricte des flux de données pour respecter les exigences de sécurité et de conformité PCI-DSS.</p>
+        <div><span class="tag">Cisco</span><span class="tag">Active Directory</span><span class="tag">GPO</span><span class="tag">WiFi (AIR-CAP3502I)</span></div>
+        <div class="liens">
+          <a href="BTS_SIO_E6_Réalisation_1 Nawfal.pdf" target="_blank">Fiche réalisation →</a>
+          <a href="TP Réalisation 1.pdf" target="_blank">Fiche TP →</a>
+        </div>
+      </div>
+    </div>
+    <div class="real">
+      <div class="img"><img src="SitkaPDpatch.png" alt="StadiumCompany" onerror="this.style.display='none'"></div>
+      <div class="corps">
+        <p class="cat">Réalisation n°2</p>
+        <h3>Optimisation de la gestion de parc et de la disponibilité des services métier</h3>
+        <p>La gestion des terminaux de commande et des caisses (POS) au sein du restaurant nécessite un inventaire centralisé pour assurer un suivi efficace. De plus, en raison de la criticité du réseau Wi-Fi pour l'activité, une supervision constante est indispensable pour garantir la continuité de service et permettre une réactivité immédiate de la DSI en cas d'incident.</p>
+        <div><span class="tag">Nagios</span><span class="tag">Active Directory</span><span class="tag">GLPI</span><span class="tag">Zimbra</span></div>
+        <div class="liens">
+          <a href="BTS_SIO_E6_Réalisation_2 - Nawfal.pdf" target="_blank">Fiche réalisation →</a>
+          <a href="TP Réalisation 1.pdf" target="_blank">Fiche TP →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="veille">
+  <h2>La Veille Technologique</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Qu'est-ce qu'une veille technologique ?</h3>
+      <p>La veille technologique consiste à suivre régulièrement l'actualité d'un domaine technique pour rester informé des nouveautés, des changements et des risques. Pour un technicien, c'est indispensable : cela permet d'anticiper les problèmes et de conseiller correctement les clients.</p>
+    </div>
+    <div class="card">
+      <h3>Qu'est-ce que j'utilise pour ma veille technologique ?</h3>
+      <p>J'utilise Google Actualités avec une alerte sur « Windows 10 » et « Windows 11 », ainsi que des sites spécialisés francophones : Le Crabe Info, IT-Connect, Clubic et 01net. Je consulte aussi le site officiel Microsoft pour les dates de fin de support. Cela me prend environ 20 minutes par jour.</p>
+    </div>
+  </div>
+
+  <h2 style="margin-top:28px">Mon sujet de veille : la fin de Windows 10 et la migration vers Windows 11</h2>
+  <div class="card">
+    <h3>Pourquoi ce sujet ?</h3>
+    <p>Chez Circle Consulting, je fais du SAV et de la réparation de PC. Je vois passer beaucoup de machines encore sous Windows 10, dont certaines ne sont pas compatibles avec Windows 11. Le support de Windows 10 est terminé depuis le 14 octobre 2025 : sans mise à jour de sécurité, ces PC deviennent une porte d'entrée pour les attaques. Suivre ce sujet me permet de savoir quoi conseiller aux clients : migrer, souscrire aux mises à jour étendues (ESU), ou changer de machine.</p>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <span class="tag">14/10/2026</span>
+      <h3>Patch Tuesday d'octobre 2026 : 1 411 failles corrigées</h3>
+      <p><b>Source :</b> <a style="color:var(--ac)" href="https://lecrabeinfo.net/mises-a-jour-windows/windows-11-kb5127648-octobre-2026/" target="_blank">Le Crabe Info</a></p>
+      <p><b>Résumé :</b> La mise à jour KB5127648 pour Windows 11 (24H2, 25H2 et 26H2) corrige 1 411 vulnérabilités dont 70 critiques. Trois failles « zero-day » sont concernées, dont une dans l'interpréteur Windows (CVE-2026-96951) déjà exploitée par des attaquants : elle permettait de contourner la protection « Mark of the Web » sur les fichiers téléchargés.</p>
+      <p><b>Ce que ça change pour moi :</b> Un PC resté sous Windows 10 sans ESU ne reçoit plus ces correctifs. Je dois vérifier que les PC que je rends aux clients sont bien à jour, et expliquer le risque à ceux qui refusent de migrer.</p>
+    </div>
+    <div class="card">
+      <span class="tag">08/10/2026</span>
+      <h3>Windows 11 26H2 : la version à installer pour gagner un an de support</h3>
+      <p><b>Source :</b> <a style="color:var(--ac)" href="https://selectra.info/telecom/actualites/marche/windows-11-26h2-passer-directement-13-octobre" target="_blank">Selectra</a></p>
+      <p><b>Résumé :</b> Microsoft a publié Windows 11 26H2 le 29 septembre 2026. Elle est supportée jusqu'au 10 octobre 2028, contre le 12 octobre 2027 pour la 25H2. La version 24H2, elle, reçoit sa dernière mise à jour de sécurité le 13 octobre 2026. Le passage se fait par un simple « package d'activation » depuis Windows Update, avec un seul redémarrage.</p>
+      <p><b>Ce que ça change pour moi :</b> Quand je réinstalle ou mets à jour un PC, je dois le passer directement en 26H2 pour que le client soit tranquille le plus longtemps possible, et repérer les PC encore en 24H2 qui ne sont plus protégés.</p>
+    </div>
+    <div class="card">
+      <span class="tag">26/06/2026</span>
+      <h3>Microsoft prolonge les mises à jour de Windows 10 jusqu'en 2027</h3>
+      <p><b>Source :</b> <a style="color:var(--ac)" href="https://www.comptoir-hardware.com/actus/software-pilotes/48705-microsoft-prolonge-lesu-de-windows-10-jusquen-octobre-2027.html" target="_blank">Le Comptoir du Hardware</a></p>
+      <p><b>Résumé :</b> Le programme ESU (Extended Security Updates) pour les particuliers, qui devait s'arrêter en octobre 2026, est prolongé jusqu'au 12 octobre 2027. Il reste gratuit si l'on synchronise ses paramètres avec un compte Microsoft, sinon 1 000 points Rewards ou 30 $. Une licence couvre jusqu'à 10 appareils. Selon StatCounter, Windows 10 équipe encore environ 27 % des PC en France.</p>
+      <p><b>Ce que ça change pour moi :</b> Pour un client dont le PC n'est pas compatible Windows 11 et qui ne veut pas en racheter un, je peux lui proposer l'inscription à l'ESU comme solution temporaire, en lui précisant que ça s'arrête en octobre 2027.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>© Nawfal MARECAR – Portfolio BTS SIO SISR – 2026</footer>
+
+<script>
+const secs=[...document.querySelectorAll('section')],links=[...document.querySelectorAll('#nav a')];
+function show(id,push=true){
+  if(!document.getElementById(id))id='accueil';
+  secs.forEach(s=>s.classList.toggle('on',s.id===id));
+  links.forEach(a=>a.classList.toggle('on',a.dataset.s===id));
+  window.scrollTo(0,0);
+  if(push){try{history.pushState({id},'','#'+id)}catch(e){}}
+}
+links.forEach(a=>a.addEventListener('click',()=>show(a.dataset.s)));
+document.querySelectorAll('[data-go]').forEach(a=>a.addEventListener('click',()=>show(a.dataset.go)));
+document.querySelectorAll('[data-doc]').forEach(a=>a.addEventListener('click',e=>{
+  e.preventDefault();
+  const pdf=a.dataset.doc;
+  const bloc=a.closest('.ligne')||a.closest('.pc');
+  const t=bloc?bloc.querySelector('span,h3'):null;
+  document.getElementById('doc-titre').textContent=t?t.textContent:'Documentation';
+  document.getElementById('doc-frame').src=pdf+'#view=FitH';
+  document.getElementById('doc-dl').href=pdf;
+  show('e5-doc');
+}));
+window.addEventListener('popstate',()=>show(location.hash.slice(1)||'accueil',false));
+show(location.hash.slice(1)||'accueil',false);
+
+document.getElementById('cform').addEventListener('submit',e=>{
+  e.preventDefault();
+  const n=document.getElementById('cnom').value,m=document.getElementById('cmail').value,t=document.getElementById('cmsg').value;
+  location.href='mailto:nawfal.marecar95@gmail.com?subject='+encodeURIComponent('Contact portfolio – '+n)+'&body='+encodeURIComponent(t+'\n\n— '+n+' ('+m+')');
+});
+</script>
+</body>
+</html>
